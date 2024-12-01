@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="94EA468DFC98CC9BD6CFDC4F2AE38329803CCA8188607D407E5599950FB6C861D7F8A60E830BF818E19F439CDDDC7DA52A7837E84177CCF6B32809AA0B142985" Timestamp="1DB439EF96EC8E0" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="363249BBD2F62F8136586FB9333C8E3E4318EB157652B9BA7548D8E96BDF1574A0FFA5BF2195EF12FC9A07BDF12B053474B720CF331C0D6C026361EBB33C2199" Timestamp="1DB43AB7A470ADF" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
-		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
-		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="LabVIEW Virtual Instrument" Name="http://www.ni.com/LabVIEW.VI" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
-		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
-		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="Web Module: WebVI" Name="http://www.ni.com/NationalInstruments.LabVIEW.HtmlVI" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
-		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="Editor" Name="http://www.ni.com/PanelCommon" OldestCompatibleVersion="6.1.0.0" Version="6.1.0.49152" />
-		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
-		<ApplicationVersionInfo Build="9.1.0.50238" Name="G Web Development Software" Version="21.0.0" />
+		<ParsableNamespace AssemblyFileVersion="9.5.0.49854" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.5.0.49854" FeatureSetName="LabVIEW Virtual Instrument" Name="http://www.ni.com/LabVIEW.VI" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.5.0.49854" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.5.0.49854" FeatureSetName="Web Module: WebVI" Name="http://www.ni.com/NationalInstruments.LabVIEW.HtmlVI" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.5.0.49854" FeatureSetName="Editor" Name="http://www.ni.com/PanelCommon" OldestCompatibleVersion="6.1.0.0" Version="6.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.5.0.49854" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="9.5.0.49854" Name="G Web Development Software" Version="22.3.0" />
 	</SourceModelFeatureSet>
 	<VirtualInstrument Id="1" OverridingModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.HTMLVirtualInstrument" xmlns="http://www.ni.com/LabVIEW.VI">
 		<Icon Id="2" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
@@ -61,7 +61,7 @@
 				<CaseStructure Bounds="133 50 670 210" Default="31a8afd0e3b44a3e8799523a616f5308" Id="55f1ac423c494849a4c306020db678ee" Selected="5785c04067564296b7588db7a5e31c7b" UserSelectorBounds="291.2 0 88 16.8">
 					<CaseStructure.Case Bounds="5 5 660 200" Id="31a8afd0e3b44a3e8799523a616f5308" Pattern="False" />
 					<CaseStructure.Case Bounds="5 5 660 200" Id="5785c04067564296b7588db7a5e31c7b" Pattern="True">
-						<MethodCall Bounds="380 70 40 40" Id="6aad076da29b456b878167d70d927b53" ResolveFailedHint="POST Buffer.gvi, Package: (G Web Development Software 2021 HTTP Library Files, Version: 21.0.0)" Signature="@aa86f4cedba24f87bda30dd59df2a3a9" Target="NI::HTTP::POST Buffer.gvi" xmlns="http://www.ni.com/MocCommon">
+						<MethodCall Bounds="380 70 40 40" Id="6aad076da29b456b878167d70d927b53" ResolveFailedHint="POST Buffer.gvi, Package: (G Web Development Software HTTP Library Files, Version: 2022 Q3)" Signature="@aa86f4cedba24f87bda30dd59df2a3a9" Target="NI::HTTP::POST Buffer.gvi" xmlns="http://www.ni.com/MocCommon">
 							<p.MethodDeclaration>
 								<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
 									<Parameter Id="B0" Desc="timeout" />
@@ -89,11 +89,11 @@
 							<Terminal DataType="String" Direction="Output" Hotspot="40 25" Id="R2" xmlns="http://www.ni.com/PlatformFramework" />
 							<Terminal DataType="Error" Direction="Output" Hotspot="40 35" Id="R3" xmlns="http://www.ni.com/PlatformFramework" />
 						</MethodCall>
-						<Literal Bounds="65 80 285 15" DataType="String" Id="cd6afe9d94944bca9f840b0ff7efd107" Label="a12cc5abe56f49a2934d7d0d829b8e7a" xmlns="http://www.ni.com/MocCommon">
-							<p.Data>http://127.0.0.1:80/WebService/CSM-RunScript</p.Data>
+						<Literal Bounds="180 80 170 15" DataType="String" Id="cd6afe9d94944bca9f840b0ff7efd107" Label="a12cc5abe56f49a2934d7d0d829b8e7a" xmlns="http://www.ni.com/MocCommon">
+							<p.Data>WebService/CSM-RunScript</p.Data>
 							<StringBehavior TextDisplayMode="Default" />
 						</Literal>
-						<NodeLabel AttachedTo="cd6afe9d94944bca9f840b0ff7efd107" Bounds="65 62 30 15" Id="a12cc5abe56f49a2934d7d0d829b8e7a" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+						<NodeLabel AttachedTo="cd6afe9d94944bca9f840b0ff7efd107" Bounds="180 62 30 15" Id="a12cc5abe56f49a2934d7d0d829b8e7a" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
 							<p.Text>url</p.Text>
 						</NodeLabel>
 						<Wire Id="827fa3871d67404f8621391e2b5a622f" Joints="N(cd6afe9d94944bca9f840b0ff7efd107:Out)|(350,85) N(6aad076da29b456b878167d70d927b53:L1)|(380,85)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -119,6 +119,14 @@
 							<p.Text>error out</p.Text>
 						</NodeLabel>
 						<Wire Id="7e5263dbf4404323a091bd0885e875e5" Joints="N(6aad076da29b456b878167d70d927b53:R3)|(420,105) h(20) v(40) N(8fbb05df3af3431a985a4a5308a803b6:Value)|(448,145)" xmlns="http://www.ni.com/PlatformFramework" />
+						<GetCurrentTime Bounds="40 135 35 30" Id="59f766134b46408784661865461ac2e3" />
+						<DataAccessor Bounds="105 135 40 15" DataItem="f0d0c1ce1ebf45e39188a67e7928c3e0" Id="e822a1fe7a4d4ce19df62f16ed5d8a1f" Label="15d34ae3629f456ca0e3b5f55500810f" xmlns="http://www.ni.com/MocCommon">
+							<Terminal DataType="Timestamp" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+						</DataAccessor>
+						<NodeLabel AttachedTo="e822a1fe7a4d4ce19df62f16ed5d8a1f" Bounds="150 135 69 14" Id="15d34ae3629f456ca0e3b5f55500810f" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>current time</p.Text>
+						</NodeLabel>
+						<Wire Id="ba7c476749bf461facbe3334f7b2d622" Joints="N(59f766134b46408784661865461ac2e3:current time)|(75,140) N(e822a1fe7a4d4ce19df62f16ed5d8a1f:Value)|(108,140)" xmlns="http://www.ni.com/PlatformFramework" />
 					</CaseStructure.Case>
 					<CaseStructure.Selector Bounds="-4 40 13 10" Docking="Left" Id="3936698d0cb544c892b07de406a8cc0a" Terminals="55f1ac423c494849a4c306020db678ee=93ddc24d7115449eb74aa12f3a2b6258, 31a8afd0e3b44a3e8799523a616f5308, 5785c04067564296b7588db7a5e31c7b" />
 				</CaseStructure>
@@ -151,6 +159,8 @@
 				<Label Height="[float]16" Id="1bedf7ad07e344118a21b3e2b83678b1" LabelOwner="[UIModel]463a7f0a350742df9ec9047c5f2077ea" Left="[float]8" Text="[string]source" Top="[float]52" Width="[float]35" />
 			</Cluster>
 			<Label Height="[float]16" Id="2f983745bc69441c97d0713af4b2822b" LabelOwner="[UIModel]f02fb68894a74cf98005f00e1a24f642" Left="[float]356" Text="[string]error out" Top="[float]192" Width="[float]47" xmlns="http://www.ni.com/PanelCommon" />
+			<TimeStampTextBox BaseName="[string]Timestamp" Height="[float]24" Id="683ec6294af24c3fa07ecf7c78f6eb9b" InteractionMode="[TimeStampTextBoxInteractionModes]ReadOnly" Label="[UIModel]e7d58c700fb34abca45170ea265f8331" Left="[float]580" Maximum="[PrecisionDateTime]3000-12-31T16:00:00.0Z" Minimum="[PrecisionDateTime]1599-12-31T16:00:00.0Z" TabIndex="[int]3" Top="[float]260" Value="{DataItemBinding Id=f0d0c1ce1ebf45e39188a67e7928c3e0}" Width="[float]226" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="e7d58c700fb34abca45170ea265f8331" LabelOwner="[UIModel]683ec6294af24c3fa07ecf7c78f6eb9b" Left="[float]580" Text="[string]current time" Top="[float]240" Width="[float]65" xmlns="http://www.ni.com/PanelCommon" />
 		</HtmlFrontPanel>
 		<DataItem AdaptToDiagramType="True" DataType="Boolean" Id="49927c8f7d964ef682d548d38561ffe7" IsLatched="True" Name="selector" xmlns="http://www.ni.com/MocCommon">
 			<p.DefaultValue>False</p.DefaultValue>
@@ -169,6 +179,9 @@
 			<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
 				<TypeDefinitionTarget TargetName="NI::G Core::Error::Error.gtype" />
 			</p.TypeDefinitionTargets>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" DataType="Timestamp" Id="f0d0c1ce1ebf45e39188a67e7928c3e0" Name="current time" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>60052752000;0;Utc</p.DefaultValue>
 		</DataItem>
 	</VirtualInstrument>
 	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
