@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="ABB3A9DD7E66D73C998A267C0EDFDA7928118D2E8997EDA0A0138B27F339AF182E5F9159D411D67C5856B39A770894F69F4454013A33C01E9957242B5487DCD9" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="4F919B2893D2C0FEC6D8E25F88BF897E9B50BC4C842789E8BECABCBEA780E7D7D6C44B92132786EBB31DF9668B1074E6393412FCDC13225D3498BAADCC0F6260" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="9.5.0.49854" FeatureSetName="GComponentFeatureSet" Name="http://www.ni.com/GComponent.xsd" OldestCompatibleVersion="9.0.0.0" Version="9.0.0.49152" />
 		<ParsableNamespace AssemblyFileVersion="9.5.0.49854" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
@@ -82,6 +82,7 @@
 						<WeakDefaultComponentConfigurationReference Id="af1872345eaf49a8aa6ef975c4eedec3" PackageName="ni-skyline-messagehttp-src-22.5.0.niaddon" Target="NI.SL.Message.gcomp" />
 						<WeakDefaultComponentConfigurationReference Id="9045341ac6954fa4b140e6b70ab66993" PackageName="ni-skyline-taghttp-src-22.5.0.niaddon" Target="NI.SL.Tag.gcomp" />
 						<WeakDefaultComponentConfigurationReference Id="a2cadb97d7ac49f0823ef50eef477ffb" PackageName="ni-skyline-tdmreader-src-22.5.0.niaddon" Target="NI.SL.TDMReader.gcomp" />
+						<ComponentConfigurationReferenceDependencySource Id="2a06eb94e74b4c91b67c6f1b4c62c843" Target="UtilityJSLI.gcomp::Configuration1" />
 					</BuildSpecificationDefinition>
 					<EmbeddedDefinitionReference Id="32" ModelDefinitionType="PackageReferencesDefinition" Name="ProjectReferences">
 						<PackageReferencesDefinition />
@@ -126,6 +127,7 @@
 					<SourceFileReference Bindings="{http://www.ni.com/GComponent.xsd}ComponentBaseType_Library,ContentKind_{http://www.ni.com/Builders/SystemDesigner/SystemModel}Process.LibraryComponent,{http://www.ni.com/SystemDesigner/EnvoyManagement}ProcessBackedEnvoyServiceMetaFactory,ComponentMoC,EnvoyManager" Id="e021aba8fc4e4e1aa127ec5a7751806a" ModelDefinitionType="ComponentDefinition" Name="openg.numeric.gcomp" StoragePath="..\OpenG\openg.numeric.gcomp\openg.numeric.gcomp" />
 					<SourceFileReference Bindings="{http://www.ni.com/GComponent.xsd}ComponentBaseType_Library,ContentKind_{http://www.ni.com/Builders/SystemDesigner/SystemModel}Process.LibraryComponent,{http://www.ni.com/SystemDesigner/EnvoyManagement}ProcessBackedEnvoyServiceMetaFactory,ComponentMoC,EnvoyManager" Id="c84daa8705a549f8a0a1d9c11e674860" ModelDefinitionType="ComponentDefinition" Name="openg.string.gcomp" StoragePath="..\OpenG\openg.string.gcomp\openg.string.gcomp" />
 					<SourceFileReference Bindings="{http://www.ni.com/GComponent.xsd}ComponentBaseType_Library,ContentKind_{http://www.ni.com/Builders/SystemDesigner/SystemModel}Process.LibraryComponent,{http://www.ni.com/SystemDesigner/EnvoyManagement}ProcessBackedEnvoyServiceMetaFactory,ComponentMoC,EnvoyManager" Id="1df27f3276454684953051a3af9fa034" ModelDefinitionType="ComponentDefinition" Name="openg.time.gcomp" StoragePath="..\OpenG\openg.time.gcomp\openg.time.gcomp" />
+					<SourceFileReference Bindings="{http://www.ni.com/GComponent.xsd}ComponentBaseType_Library,ContentKind_{http://www.ni.com/Builders/SystemDesigner/SystemModel}Process.LibraryComponent,{http://www.ni.com/SystemDesigner/EnvoyManagement}ProcessBackedEnvoyServiceMetaFactory,ComponentMoC,EnvoyManager" Id="a5a50e1afe804cfc941acf8c033d0ede" ModelDefinitionType="ComponentDefinition" Name="UtilityJSLI.gcomp" StoragePath="..\NEVSTOP-LAB\UtilityJSLI.gcomp\UtilityJSLI.gcomp" />
 				</NameScopingEnvoy>
 			</NameScopingEnvoy>
 		</EmbeddedDefinitionReference>
