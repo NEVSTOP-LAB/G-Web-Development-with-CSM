@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="30B54E1ED4E31A796E1AF52F36F95ACCB2C4429A5B2A368D1AE402A57152E5BD67B03CAE5F148F1AF917959F96E4F73473DA7C0E34EDF3FBDD750450C2B1B137" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="24804D86F8CC71B9EEEFEC94213AB3FCF4AD7972CF9791FD0CB51489F058959800B1DC3FE711A20E7117436F356E3CA872C1BC9FB923991663BBCC12ABCBB333" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="GComponentFeatureSet" Name="http://www.ni.com/GComponent.xsd" OldestCompatibleVersion="9.0.0.0" Version="9.0.0.49152" />
 		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
@@ -73,6 +73,15 @@
 						<WeakDefaultComponentConfigurationReference Id="c7322ceabb2044ae9eba367516d14a6f" PackageName="ni-skyline-configuration-src-21.1.0.niaddon" Target="NI.SL.Configuration.gcomp" />
 						<WeakDefaultComponentConfigurationReference Id="d99a4571e53e46a896a01a9bf2e9079c" PackageName="ni-skyline-taghttp-src-21.1.0.niaddon" Target="NI.SL.Tag.gcomp" />
 						<WeakDefaultComponentConfigurationReference Id="f36e1af751c642a2b447af3b31212e06" PackageName="ni-skyline-utilities-src-21.1.0.niaddon" Target="NI.SL.Utilities.gcomp" />
+						<ComponentConfigurationReferenceDependencySource Id="988400b5c81b4b64b08cdbe0b1045d75" Target="openg.array.gcomp::Default" />
+						<ComponentConfigurationReferenceDependencySource Id="38a257528abf4f869112bf53cbedf7ae" Target="openg.boolean.gcomp::Default" />
+						<ComponentConfigurationReferenceDependencySource Id="2ae93c4758d64f9dad68e3019610f165" Target="openg.variantdata.gcomp::Default" />
+						<ComponentConfigurationReferenceDependencySource Id="b76a14b77dee4767907af2529cb9e4d8" Target="openg.comparison.gcomp::Default" />
+						<ComponentConfigurationReferenceDependencySource Id="5f5e84b602b94eb68273db053283a148" Target="openg.error.gcomp::Default" />
+						<ComponentConfigurationReferenceDependencySource Id="88c161dfad37451ab117e23b65863bee" Target="openg.md5.gcomp::Default" />
+						<ComponentConfigurationReferenceDependencySource Id="9d75f2819b7047e487227ba39c939ee7" Target="openg.numeric.gcomp::Default" />
+						<ComponentConfigurationReferenceDependencySource Id="1f13ffb73feb4d4985e3f474ce94a7e5" Target="openg.string.gcomp::Default" />
+						<ComponentConfigurationReferenceDependencySource Id="ab11328276d04324aed60e69ad08c69d" Target="openg.time.gcomp::Default" />
 					</BuildSpecificationDefinition>
 					<EmbeddedDefinitionReference Id="32" ModelDefinitionType="PackageReferencesDefinition" Name="ProjectReferences">
 						<PackageReferencesDefinition />
@@ -108,6 +117,15 @@
 						</ComponentDefinition>
 					</EmbeddedDefinitionReference>
 					<SourceFileReference Bindings="EnvoyManager,ComponentMoC,{http://www.ni.com/GComponent.xsd}ComponentBaseType_Application,{http://www.ni.com/SystemDesigner/EnvoyManagement}ProcessBackedEnvoyServiceMetaFactory,ContentKind_{http://www.ni.com/Builders/SystemDesigner/SystemModel}Process.ApplicationComponent" Id="fcdf7ecad67447a3bdb4d169f1bd53fd" ModelDefinitionType="ComponentDefinition" Name="WebApp.gcomp" StoragePath="WebApp.gcomp\WebApp.gcomp" />
+					<SourceFileReference Bindings="{http://www.ni.com/GComponent.xsd}ComponentBaseType_Library,ContentKind_{http://www.ni.com/Builders/SystemDesigner/SystemModel}Process.LibraryComponent,{http://www.ni.com/SystemDesigner/EnvoyManagement}ProcessBackedEnvoyServiceMetaFactory,ComponentMoC,EnvoyManager" Id="447eea1b9cc94740b5aceb9d809eeec8" ModelDefinitionType="ComponentDefinition" Name="openg.array.gcomp" StoragePath="..\OpenG\openg.array.gcomp\openg.array.gcomp" />
+					<SourceFileReference Bindings="{http://www.ni.com/GComponent.xsd}ComponentBaseType_Library,ContentKind_{http://www.ni.com/Builders/SystemDesigner/SystemModel}Process.LibraryComponent,{http://www.ni.com/SystemDesigner/EnvoyManagement}ProcessBackedEnvoyServiceMetaFactory,ComponentMoC,EnvoyManager" Id="5197e92472d04473b73004618dfcbb01" ModelDefinitionType="ComponentDefinition" Name="openg.boolean.gcomp" StoragePath="..\OpenG\openg.boolean.gcomp\openg.boolean.gcomp" />
+					<SourceFileReference Bindings="{http://www.ni.com/GComponent.xsd}ComponentBaseType_Library,ContentKind_{http://www.ni.com/Builders/SystemDesigner/SystemModel}Process.LibraryComponent,{http://www.ni.com/SystemDesigner/EnvoyManagement}ProcessBackedEnvoyServiceMetaFactory,ComponentMoC,EnvoyManager" Id="a67cd19eb4f475f9dc481ee324215c8" ModelDefinitionType="ComponentDefinition" Name="openg.variantdata.gcomp" StoragePath="..\OpenG\openg.variantdata.gcomp\openg.variantdata.gcomp" />
+					<SourceFileReference Bindings="{http://www.ni.com/GComponent.xsd}ComponentBaseType_Library,ContentKind_{http://www.ni.com/Builders/SystemDesigner/SystemModel}Process.LibraryComponent,{http://www.ni.com/SystemDesigner/EnvoyManagement}ProcessBackedEnvoyServiceMetaFactory,ComponentMoC,EnvoyManager" Id="4b5d8a5d9a8f4affa61a6f9d1af9ae29" ModelDefinitionType="ComponentDefinition" Name="openg.comparison.gcomp" StoragePath="..\OpenG\openg.comparison.gcomp\openg.comparison.gcomp" />
+					<SourceFileReference Bindings="{http://www.ni.com/GComponent.xsd}ComponentBaseType_Library,ContentKind_{http://www.ni.com/Builders/SystemDesigner/SystemModel}Process.LibraryComponent,{http://www.ni.com/SystemDesigner/EnvoyManagement}ProcessBackedEnvoyServiceMetaFactory,ComponentMoC,EnvoyManager" Id="3a26808a13bf4010b67517a294870feb" ModelDefinitionType="ComponentDefinition" Name="openg.error.gcomp" StoragePath="..\OpenG\openg.error.gcomp\openg.error.gcomp" />
+					<SourceFileReference Bindings="{http://www.ni.com/GComponent.xsd}ComponentBaseType_Library,ContentKind_{http://www.ni.com/Builders/SystemDesigner/SystemModel}Process.LibraryComponent,{http://www.ni.com/SystemDesigner/EnvoyManagement}ProcessBackedEnvoyServiceMetaFactory,ComponentMoC,EnvoyManager" Id="cb3517a93f524372994a7c6fbfc5cb8b" ModelDefinitionType="ComponentDefinition" Name="openg.md5.gcomp" StoragePath="..\OpenG\openg.md5.gcomp\openg.md5.gcomp" />
+					<SourceFileReference Bindings="{http://www.ni.com/GComponent.xsd}ComponentBaseType_Library,ContentKind_{http://www.ni.com/Builders/SystemDesigner/SystemModel}Process.LibraryComponent,{http://www.ni.com/SystemDesigner/EnvoyManagement}ProcessBackedEnvoyServiceMetaFactory,ComponentMoC,EnvoyManager" Id="e021aba8fc4e4e1aa127ec5a7751806a" ModelDefinitionType="ComponentDefinition" Name="openg.numeric.gcomp" StoragePath="..\OpenG\openg.numeric.gcomp\openg.numeric.gcomp" />
+					<SourceFileReference Bindings="{http://www.ni.com/GComponent.xsd}ComponentBaseType_Library,ContentKind_{http://www.ni.com/Builders/SystemDesigner/SystemModel}Process.LibraryComponent,{http://www.ni.com/SystemDesigner/EnvoyManagement}ProcessBackedEnvoyServiceMetaFactory,ComponentMoC,EnvoyManager" Id="c84daa8705a549f8a0a1d9c11e674860" ModelDefinitionType="ComponentDefinition" Name="openg.string.gcomp" StoragePath="..\OpenG\openg.string.gcomp\openg.string.gcomp" />
+					<SourceFileReference Bindings="{http://www.ni.com/GComponent.xsd}ComponentBaseType_Library,ContentKind_{http://www.ni.com/Builders/SystemDesigner/SystemModel}Process.LibraryComponent,{http://www.ni.com/SystemDesigner/EnvoyManagement}ProcessBackedEnvoyServiceMetaFactory,ComponentMoC,EnvoyManager" Id="1df27f3276454684953051a3af9fa034" ModelDefinitionType="ComponentDefinition" Name="openg.time.gcomp" StoragePath="..\OpenG\openg.time.gcomp\openg.time.gcomp" />
 				</NameScopingEnvoy>
 			</NameScopingEnvoy>
 		</EmbeddedDefinitionReference>
