@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="0D34A6BD6C53CDB3319F15CB40235C874A3D23CEB55C392D45CDE867B80404BC70E39FA81E0FFA1FC2E8AB59FD785AF3AF0F472BF43AE8BFE514215623F4010A" Timestamp="1DB4481EA5CF144" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="9.3.0.49613" FeatureSetName="GComponentFeatureSet" Name="http://www.ni.com/GComponent.xsd" OldestCompatibleVersion="9.0.0.0" Version="9.0.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.3.0.49613" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.3.0.49613" FeatureSetName="SystemDesigner" Name="http://www.ni.com/SystemDesigner/EnvoyManagement" OldestCompatibleVersion="5.0.0.0" Version="5.0.0.49152" />
+		<ApplicationVersionInfo Build="9.3.0.49613" Name="G Web Development Software" Version="22.0.0" />
+	</SourceModelFeatureSet>
+	<ComponentDefinition DefaultConfigurationName="Configuration1" Id="55661432cdb04854b4392b0bb1125aa2" RootNamespaceId="79be7ec32237465c8c8d85d0f58bb9e6" xmlns="http://www.ni.com/GComponent.xsd">
+		<Icon Id="383c6501313c402cb2458fe17fe9e66c" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="9bd91662dde24faf89b40e389cc98401" Left="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<IconTemplate Height="[float]40" Id="e61e946557f1497483ce8b8ee4a79ea1" Left="[float]0" TemplateName="[string]Blank" Top="[float]0" Width="[float]40" />
+			</IconPanel>
+		</Icon>
+		<CompilerSymbolTable Id="e472de251bd24981875002385a8cdbc9" xmlns="http://www.ni.com/PlatformFramework" />
+		<ComponentConfiguration ComponentSubtypeIdentifier="G Library" Id="14d3f86d7a73435aa11082544800e054" Name="Configuration1">
+			<CompilerSymbolTable Id="b5070319c1e64b32b613316e6eeb0472" xmlns="http://www.ni.com/PlatformFramework" />
+			<GLibraryProperties Id="111b97a3ba8d4aa5bbcb32ca40f08d19" />
+			<ComponentItemProperties AssociatedEnvoyId="a37ce528f780416790d445388ce73bcb" Exported="True" Id="635cb35ac2974e53a34030619345e1e9" />
+			<ComponentItemProperties AssociatedEnvoyId="3429f6fe1d264038be848d310b9c1917" Exported="True" Id="98f906c8256b43708268f4bd4983e675" />
+			<ComponentItemProperties AssociatedEnvoyId="74a5860daa6d4bf0a4b2487e517aa6cf" Exported="True" Id="5024f779b53e4efbb9f1ac039a763cd9" />
+			<ComponentItemProperties AssociatedEnvoyId="ad50cc343a9240c1b28a2fb7ff085085" Exported="True" Id="84b79d3e35374a58ac37ff67a371f597" />
+			<ComponentItemProperties AssociatedEnvoyId="b678dc48ec1d46079c48587bb8d3ec14" Exported="True" Id="3503fcd7740540a88bb2c51b1a25776e" />
+			<ComponentItemProperties AssociatedEnvoyId="43e8e3a3e2814d3cadcc5ff3393b0eaf" Exported="True" Id="5dfc6931473b456db524a8720734a68b" />
+			<ComponentItemProperties AssociatedEnvoyId="e480995fa214d658289826b9ab8e6fc" Exported="True" Id="64c54a0edd1c4d3082dbdf69cb8c30fe" />
+			<ComponentItemProperties AssociatedEnvoyId="19daf2d0d58e40709f238f7453155ffa" Exported="True" Id="7eccafe5206c4f6a8fdc25259a7d2aaf" />
+		</ComponentConfiguration>
+	</ComponentDefinition>
+	<EnvoyManagerFile Id="ee24c6d8fc0345c393307e6aa79c3294" xmlns="http://www.ni.com/PlatformFramework">
+		<EnvoyManagerRootEnvoy Id="5a1c8dbb0ed54de4b5cdfd2f89beefe3" ModelDefinitionType="EnvoyManagerRootEnvoy" Name="RootEnvoy" />
+		<EmbeddedDefinitionReference Id="5e330ee1abc14eb2b1111f3a63e956b3" ModelDefinitionType="{http://www.ni.com/GComponent.xsd}ComponentDefinitionEnvoyHierarchyRoot" Name="Global namespace">
+			<ComponentDefinitionEnvoyHierarchyRoot xmlns="http://www.ni.com/GComponent.xsd" />
+			<NameScopingEnvoy AutomaticallyResolveUp="True" Id="79be7ec32237465c8c8d85d0f58bb9e6" Name="Library">
+				<SourceFileReference Bindings="ContentKind_{http://www.ni.com/SystemDesigner/Vi}Process.Vi,{http://www.ni.com/SystemDesigner/EnvoyManagement}ProcessBackedEnvoyServiceMetaFactory" Id="a37ce528f780416790d445388ce73bcb" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="Boolean Strings.gvi" StoragePath="Boolean Strings.gvi" />
+				<SourceFileReference Bindings="ContentKind_{http://www.ni.com/SystemDesigner/Vi}Process.Vi,{http://www.ni.com/SystemDesigner/EnvoyManagement}ProcessBackedEnvoyServiceMetaFactory" Id="3429f6fe1d264038be848d310b9c1917" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="String to Boolean_csm.gvi" StoragePath="String to Boolean_csm.gvi" />
+				<SourceFileReference Bindings="ContentKind_{http://www.ni.com/SystemDesigner/Vi}Process.Vi,{http://www.ni.com/SystemDesigner/EnvoyManagement}ProcessBackedEnvoyServiceMetaFactory" Id="74a5860daa6d4bf0a4b2487e517aa6cf" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="Trim Both Whitespace.gvi" StoragePath="Trim Both Whitespace.gvi" />
+				<SourceFileReference Bindings="ContentKind_{http://www.ni.com/SystemDesigner/Vi}Process.Vi,{http://www.ni.com/SystemDesigner/EnvoyManagement}ProcessBackedEnvoyServiceMetaFactory" Id="ad50cc343a9240c1b28a2fb7ff085085" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="Compare Two Numbers_csm.gvi" StoragePath="Compare Two Numbers_csm.gvi" />
+				<SourceFileReference Bindings="ContentKind_{http://www.ni.com/SystemDesigner/Vi}Process.Vi,{http://www.ni.com/SystemDesigner/EnvoyManagement}ProcessBackedEnvoyServiceMetaFactory" Id="b678dc48ec1d46079c48587bb8d3ec14" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="Match Multiple Pattern_csm.gvi" StoragePath="Match Multiple Pattern_csm.gvi" />
+				<SourceFileReference Bindings="ContentKind_{http://www.ni.com/SystemDesigner/Vi}Process.Vi,{http://www.ni.com/SystemDesigner/EnvoyManagement}ProcessBackedEnvoyServiceMetaFactory" Id="43e8e3a3e2814d3cadcc5ff3393b0eaf" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="String To Number(I64)_csm.gvi" StoragePath="String To Number(I64)_csm.gvi" />
+				<SourceFileReference Bindings="ContentKind_{http://www.ni.com/SystemDesigner/Vi}Process.Vi,{http://www.ni.com/SystemDesigner/EnvoyManagement}ProcessBackedEnvoyServiceMetaFactory" Id="e480995fa214d658289826b9ab8e6fc" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="String To Float_csm.gvi" StoragePath="String To Float_csm.gvi" />
+				<SourceFileReference Id="19daf2d0d58e40709f238f7453155ffa" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="Replace Tokens in String.gvi" StoragePath="Replace Tokens in String.gvi" />
+				<NameScopingEnvoy AutomaticallyResolveUp="True" Id="96c685898a044ca3955155f7276ad216" Name="Support" />
+			</NameScopingEnvoy>
+		</EmbeddedDefinitionReference>
+		<NameScopingEnvoy Id="1a54756448ac4d40b71b6952233ef319" Name="CSM-APIString-Utility.gcomp" NameTracksFileName="True">
+			<ContentReference ContentIdentifier="14d3f86d7a73435aa11082544800e054" Id="2dd4ada1a4bf414d9399ccb3a1b6b681" Name="Configuration1" OverridingModelDefinitionType="{http://www.ni.com/GComponent.xsd}ComponentConfiguration" />
+		</NameScopingEnvoy>
+	</EnvoyManagerFile>
+</SourceFile>
