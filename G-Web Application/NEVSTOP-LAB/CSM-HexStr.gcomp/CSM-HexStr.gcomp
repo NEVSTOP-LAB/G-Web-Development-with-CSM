@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="833272760D8E665D9AB952581D7982D6E8ED059EA00C34534B3C3C354D0513270E6901B2DE41FDFFDD09730BFD5FE2788B21D0A70B0E7780AD96AC54FB6313AE" Timestamp="1DB451C79093D7F" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="GComponentFeatureSet" Name="http://www.ni.com/GComponent.xsd" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="SystemDesigner" Name="http://www.ni.com/SystemDesigner/EnvoyManagement" OldestCompatibleVersion="5.0.0.0" Version="5.0.0.49152" />
+		<ApplicationVersionInfo Build="8.1.0.50414" Name="LabVIEW NXG" Version="5.0.0" />
+	</SourceModelFeatureSet>
+	<ComponentDefinition DefaultConfigurationName="Configuration1" Id="3364cf959cb5419aa313f5bd94012b6c" RootNamespaceId="56bd4f1aed564ebb805d0262d2fcea82" xmlns="http://www.ni.com/GComponent.xsd">
+		<Icon Id="e2fe44a1deca439c831b87015fcebee4" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="eab4483d7f9b47f99c4200d65da8ae8e" Left="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<IconTemplate Height="[float]40" Id="f9e0fc75d7684e2f95cad3cbbcbf1c8b" Left="[float]0" TemplateName="[string]Blank" Top="[float]0" Width="[float]40" />
+			</IconPanel>
+		</Icon>
+		<CompilerSymbolTable Id="8dda9c6ff915490bad5fa337d5cf4339" xmlns="http://www.ni.com/PlatformFramework" />
+		<ComponentConfiguration Id="7c2545093d254f58bb99e60a0b14df8c" Name="Configuration1">
+			<CompilerSymbolTable Id="3c1c419911464fd59bd7d7833a1286bc" xmlns="http://www.ni.com/PlatformFramework" />
+			<GLibraryProperties Id="dace0f7b4c774137881cd8a8ba7584fd" />
+			<ComponentItemProperties AssociatedEnvoyId="94041cd2bbf14965957e0bd476f0054f" Exported="True" Id="f2f7ad74c014438ca6947898444babd4" />
+			<ComponentItemProperties AssociatedEnvoyId="365e7f433a97458e876b1ea01663700a" Exported="True" Id="7253f8e1a0c44424b3cc1b41b20e2d25" />
+		</ComponentConfiguration>
+	</ComponentDefinition>
+	<EnvoyManagerFile Id="980e89010e40498abc3cf2407638525d" xmlns="http://www.ni.com/PlatformFramework">
+		<EnvoyManagerRootEnvoy Id="ea129adf1dc64306a472cfce4c9f0dd3" ModelDefinitionType="EnvoyManagerRootEnvoy" Name="RootEnvoy" />
+		<EmbeddedDefinitionReference Id="be9871eebc7541b9b59340471e9a7c3d" ModelDefinitionType="{http://www.ni.com/GComponent.xsd}ComponentDefinitionEnvoyHierarchyRoot" Name="Global namespace">
+			<ComponentDefinitionEnvoyHierarchyRoot xmlns="http://www.ni.com/GComponent.xsd" />
+			<NameScopingEnvoy AutomaticallyResolveUp="True" Id="56bd4f1aed564ebb805d0262d2fcea82" Name="CSM-HexStr">
+				<SourceFileReference Bindings="ContentKind_{http://www.ni.com/SystemDesigner/Vi}Process.Vi,{http://www.ni.com/SystemDesigner/EnvoyManagement}ProcessBackedEnvoyServiceMetaFactory" Id="94041cd2bbf14965957e0bd476f0054f" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="CSM - Convert HexStr to Data.gvi" StoragePath="CSM - Convert HexStr to Data.gvi" />
+				<SourceFileReference Bindings="ContentKind_{http://www.ni.com/SystemDesigner/Vi}Process.Vi,{http://www.ni.com/SystemDesigner/EnvoyManagement}ProcessBackedEnvoyServiceMetaFactory" Id="365e7f433a97458e876b1ea01663700a" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="CSM - Convert Data to HexStr.gvi" StoragePath="CSM - Convert Data to HexStr.gvi" />
+			</NameScopingEnvoy>
+		</EmbeddedDefinitionReference>
+		<NameScopingEnvoy Id="360b7a75955a44b0ac71653fb15d04e0" Name="CSM-HexStr.gcomp" NameTracksFileName="True">
+			<ContentReference ContentIdentifier="7c2545093d254f58bb99e60a0b14df8c" Id="ca3667d0e3a4412a9e633b13ebbd3b85" Name="Configuration1" OverridingModelDefinitionType="{http://www.ni.com/GComponent.xsd}ComponentConfiguration" />
+		</NameScopingEnvoy>
+	</EnvoyManagerFile>
+</SourceFile>
