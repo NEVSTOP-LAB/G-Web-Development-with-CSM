@@ -41,18 +41,29 @@ graph TB
     style Browser fill:#f5e6ff
 ```
 
+## 核心优势
+
+- **单一接口，全面功能**：仅需暴露一个 `CSM-RunScript` 接口，即可调用后端所有 CSM 模块的全部功能
+- **模块化开发**：基于 CSM 框架的消息驱动架构，模块间松耦合，易于扩展和维护
+- **无需客户端**：用户通过浏览器直接访问，无需安装任何客户端软件
+- **快速 Web 化**：将现有 LabVIEW 应用快速转换为 Web 应用，无需为每个功能编写独立的 Web Service
+- **适合嵌入式部署**：特别适合部署在 cRIO、PXI 等 RT 目标上，实现远程监控与控制
+
 ## 项目结构
 
 ```text
 G-Web-Development-with-CSM/
-├── LabVIEW Project with Web Services/   # LabVIEW 后端工程
-│   ├── WebService/
-│   │   ├── Methods/
-│   │   │   └── CSM-RunScript.vi         # 唯一的 Web Service 接口
-│   │   ├── CSM/
-│   │   │   └── CSM.vi                   # CSM 应用主模块
-│   │   └── Startup Main.vi              # 启动入口
-│   └── Test WebService.vi               # Web Service 测试 VI
+├── LabVIEW Project with Web Serivces/   # LabVIEW 后端工程
+│   ├── LabVIEW Project with Web Serivces.lvproj
+│   ├── Test WebService.vi               # Web Service 测试 VI
+│   └── WebService/
+│       ├── CSM WebService.lvlib         # Web Service 库
+│       ├── Startup Main.vi              # 启动入口
+│       ├── Methods/
+│       │   └── CSM-RunScript.vi         # 唯一的 Web Service 接口
+│       ├── CSM/
+│       │   └── CSM.vi                   # CSM 应用主模块
+│       └── Support/                     # 支持 VI
 └── G-Web Application/                   # G-Web 前端工程
     └── Web Application/                 # 可部署的 Web 应用
 ```
@@ -77,9 +88,9 @@ API: Start ->| SomeModule
 ## 快速开始
 
 1. **构建 CSM 应用**：在 LabVIEW 中完成基于 CSM 框架的业务逻辑模块
-2. **打开后端工程**：用 LabVIEW 打开 `LabVIEW Project with Web Services/LabVIEW Project with Web Services.lvproj`，在 `CSM/CSM.vi` 中添加或修改业务模块
+2. **打开后端工程**：用 LabVIEW 打开 `LabVIEW Project with Web Serivces/LabVIEW Project with Web Serivces.lvproj`，在 `WebService/CSM/CSM.vi` 中添加或修改业务模块
 3. **打开前端工程**：用 G Web Development Software 打开 `G-Web Application/`，配置 HTTP 节点指向 `CSM-RunScript` 接口
-4. **部署与运行**：右键 Web Service → **Deploy**，或直接运行 `Startup Main.vi`；构建 G-Web 应用并发布到 NI Web Server
+4. **部署与运行**：右键 Web Service → **Deploy**，或直接运行 `WebService/Startup Main.vi`；构建 G-Web 应用并发布到 NI Web Server
 5. **浏览器访问**：`http://<设备IP>:<端口>/CSMWebService/`
 
 ## 依赖项
