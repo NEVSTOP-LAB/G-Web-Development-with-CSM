@@ -1,0 +1,369 @@
+/* Custom Beautification CSS for G-Web Application */
+/* This file adds modern styling without modifying any JavaScript or HTML IDs */
+
+/* ===== Global Styles ===== */
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* ===== Main Container ===== */
+.ni-front-panel-wrapper {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    backdrop-filter: blur(10px);
+}
+
+ni-front-panel {
+    background: transparent !important;
+}
+
+/* ===== Layout Groups ===== */
+ni-flexible-layout-group {
+    margin-bottom: 25px;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== Flexible Layout Containers ===== */
+ni-flexible-layout-container {
+    background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+ni-flexible-layout-container:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+/* ===== Labels ===== */
+ni-label {
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* ===== Input Controls ===== */
+ni-string-control,
+jqx-date-time-picker,
+jqx-numeric-text-box {
+    background: white;
+    border: 2px solid #e0e6ed;
+    border-radius: 8px;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+ni-string-control:hover,
+jqx-date-time-picker:hover,
+jqx-numeric-text-box:hover {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+ni-string-control:focus-within,
+jqx-date-time-picker:focus-within,
+jqx-numeric-text-box:focus-within {
+    border-color: #667eea;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2);
+    outline: none;
+}
+
+/* ===== Graph Styling ===== */
+ni-cartesian-graph {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border: 2px solid #e0e6ed;
+    transition: all 0.3s ease;
+}
+
+ni-cartesian-graph:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-color: #667eea;
+}
+
+/* Graph Legends */
+ni-scale-legend,
+ni-plot-legend,
+ni-cursor-legend,
+ni-graph-tools {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 8px;
+    margin: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e6ed;
+}
+
+/* ===== Cluster Styling ===== */
+ni-cluster {
+    background: linear-gradient(to bottom right, #ffffff, #f8f9fa);
+    border: 2px solid #dee2e6;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+ni-cluster:hover {
+    border-color: #667eea;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== LED Indicator ===== */
+jqx-led {
+    filter: drop-shadow(0 0 8px rgba(102, 126, 234, 0.6));
+    transition: all 0.3s ease;
+}
+
+jqx-led:hover {
+    filter: drop-shadow(0 0 12px rgba(102, 126, 234, 0.8));
+    transform: scale(1.1);
+}
+
+/* ===== Flexible Layout Components ===== */
+ni-flexible-layout-component {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 8px;
+    transition: all 0.3s ease;
+}
+
+ni-flexible-layout-component:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* ===== Enhanced Typography ===== */
+ni-string-control[read-only='true'] {
+    background: linear-gradient(to right, #f8f9fa, #ffffff);
+    color: #495057;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 13px;
+}
+
+/* ===== Error Display Styling ===== */
+ni-cluster[ni-control-id='8'] {
+    background: linear-gradient(135deg, #fff5f5 0%, #ffe5e5 100%);
+    border: 2px solid #feb2b2;
+}
+
+/* ===== Scrollbar Styling ===== */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #667eea, #764ba2);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #5568d3, #653a8b);
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 768px) {
+    .ni-front-panel-wrapper {
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    ni-flexible-layout-container {
+        padding: 15px;
+    }
+
+    ni-flexible-layout-component {
+        margin: 5px;
+        padding: 10px;
+    }
+}
+
+/* ===== Animation for Page Load ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.ni-front-panel-wrapper {
+    animation: fadeIn 0.8s ease-in;
+}
+
+/* ===== Button Hover Effects (if any buttons exist) ===== */
+button,
+.ni-button,
+[role="button"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+button:hover,
+.ni-button:hover,
+[role="button"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+button:active,
+.ni-button:active,
+[role="button"]:active {
+    transform: translateY(0);
+}
+
+/* ===== Card-like Sections ===== */
+ni-flexible-layout-wrapper {
+    position: relative;
+}
+
+ni-flexible-layout-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    border-radius: 3px 3px 0 0;
+}
+
+/* ===== Input Focus Glow ===== */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+/* ===== Specific Component Enhancements ===== */
+
+/* Time Display */
+jqx-date-time-picker {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Graph Container */
+ni-flexible-layout-component[layout-pattern='graph'] {
+    background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+    border: 2px solid #e0e6ed;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+/* URL Information Clusters - Make them stand out */
+ni-cluster[ni-control-id='51'],
+ni-cluster[ni-control-id='26'] {
+    background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+    border: 2px solid #4dd0e1;
+}
+
+/* Title Bar Effect for Main Panel */
+ni-front-panel[ni-control-id='2'] {
+    position: relative;
+    overflow: visible;
+}
+
+/* Add subtle pattern overlay */
+.ni-front-panel-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(102, 126, 234, 0.02) 35px, rgba(102, 126, 234, 0.02) 70px);
+    pointer-events: none;
+    border-radius: 20px;
+}
+
+/* Improve readability */
+ni-string-control[read-only='true'] input,
+ni-string-control[read-only='true'] textarea {
+    background: transparent;
+    border: none;
+    padding: 8px;
+}
+
+/* Add icons effect to labels (decorative) */
+ni-label[text='Graph']::before,
+ni-label[text='error out']::before,
+ni-label[text='Web Time']::before {
+    content: '▸ ';
+    color: #667eea;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* Enhance spacing between components */
+ni-flexible-layout-component + ni-flexible-layout-component {
+    margin-left: 15px;
+}
+
+/* Add subtle pulse animation to LED */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+jqx-led[value='true'] {
+    animation: pulse 2s infinite;
+}
+
+/* Print-friendly styles */
+@media print {
+    body {
+        background: white;
+    }
+
+    .ni-front-panel-wrapper {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
