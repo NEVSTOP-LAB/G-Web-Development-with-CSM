@@ -1,39 +1,41 @@
 # G-Web Development with CSM
 
-借助 CSM 框架，将 LabVIEW 应用发布为 Web 服务，通过 G-Web 前端在浏览器中进行远程监控与控制。只需暴露**一个** `CSM-RunScript` 接口，即可调用后端所有 CSM 模块的全部功能，无需为每个功能单独编写 Web Service VI。
+[English](./README.md) | [中文](./README(CN).md)
 
-适合部署在 NI cRIO/PXI 等 RT 目标上，用户无需安装客户端，直接通过浏览器访问局域网内设备。
+Using the CSM framework to publish LabVIEW applications as Web Services and enable remote monitoring and control through a G-Web front-end in the browser. By exposing just **one** `CSM-RunScript` endpoint, all functionality of every CSM module in the back end becomes accessible — no need to write a separate Web Service VI for each feature.
 
-> 详细文档：[CSM-Wiki - 基于 G-Web 的应用开发](https://nevstop-lab.github.io/CSM-Wiki/docs/examples/csm-gweb-development.html)
+Ideal for deployment on NI cRIO/PXI and other RT targets. Users can access the device over the local network directly from a browser without installing any client software.
 
-## 系统架构
+> Full documentation: [CSM-Wiki - G-Web Application Development](https://nevstop-lab.github.io/CSM-Wiki/docs/examples/csm-gweb-development.html)
+
+## System Architecture
 
 ```mermaid
 graph TB
-    Browser["浏览器（客户端）"]
+    Browser["Browser (Client)"]
 
     subgraph LabVIEW EXE/RT Target
-        subgraph "NI Web Server（上位机或 RT）"
-            GW["G-Web Application<br/>(HTML/CSS/JS 前端)"]
-            RS["CSM-RunScript API(POST)<br/>Web Service 后端接口"]
+        subgraph "NI Web Server (Host PC or RT)"
+            GW["G-Web Application<br/>(HTML/CSS/JS Front-end)"]
+            RS["CSM-RunScript API (POST)<br/>Web Service Back-end"]
         end
 
-        subgraph "LabVIEW 应用"
-            Bus[CSM 隐形总线]
+        subgraph "LabVIEW Application"
+            Bus[CSM Invisible Bus]
             M1[CSM Module A]
             M2[CSM Module B]
             MN[CSM Module N]
         end
     end
 
-    Browser -->|"① 加载 Web 页面"| GW
+    Browser -->|"① Load Web Page"| GW
     GW -.->|"HTML/CSS/JS"| Browser
     Browser -->|"② HTTP POST CSM Script"| RS
-    RS -->|发送 CSM 脚本| Bus
-    Bus <-->|CSM消息| M1
-    Bus <-->|CSM消息| M2
-    Bus <-->|CSM消息| MN
-    RS -->|返回执行结果| Browser
+    RS -->|Send CSM Script| Bus
+    Bus <-->|CSM Message| M1
+    Bus <-->|CSM Message| M2
+    Bus <-->|CSM Message| MN
+    RS -->|Return Result| Browser
 
     style RS fill:#e1f5ff
     style Bus fill:#fff4e6,stroke-dasharray:5 5
@@ -41,66 +43,66 @@ graph TB
     style Browser fill:#f5e6ff
 ```
 
-## 核心优势
+## Key Advantages
 
-- **单一接口，全面功能**：仅需暴露一个 `CSM-RunScript` 接口，即可调用后端所有 CSM 模块的全部功能
-- **模块化开发**：基于 CSM 框架的消息驱动架构，模块间松耦合，易于扩展和维护
-- **无需客户端**：用户通过浏览器直接访问，无需安装任何客户端软件
-- **快速 Web 化**：将现有 LabVIEW 应用快速转换为 Web 应用，无需为每个功能编写独立的 Web Service
-- **适合嵌入式部署**：特别适合部署在 cRIO、PXI 等 RT 目标上，实现远程监控与控制
+- **Single endpoint, full functionality**: Expose only one `CSM-RunScript` endpoint to access all features of every CSM module in the back end.
+- **Modular development**: Message-driven architecture based on the CSM framework — loosely coupled modules that are easy to extend and maintain.
+- **No client required**: Users access the application directly from a browser with no client software installation needed.
+- **Rapid web enablement**: Quickly convert an existing LabVIEW application into a web application without writing a separate Web Service for each feature.
+- **Embedded deployment friendly**: Especially suited for deployment on cRIO, PXI, and other RT targets for remote monitoring and control.
 
-## 项目结构
+## Project Structure
 
 ```text
 G-Web-Development-with-CSM/
-├── LabVIEW Project with Web Serivces/   # LabVIEW 后端工程
+├── LabVIEW Project with Web Serivces/   # LabVIEW back-end project
 │   ├── LabVIEW Project with Web Serivces.lvproj
-│   ├── Test WebService.vi               # Web Service 测试 VI
+│   ├── Test WebService.vi               # Web Service test VI
 │   └── WebService/
-│       ├── CSM WebService.lvlib         # Web Service 库
-│       ├── Startup Main.vi              # 启动入口
+│       ├── CSM WebService.lvlib         # Web Service library
+│       ├── Startup Main.vi              # Application entry point
 │       ├── Methods/
-│       │   └── CSM-RunScript.vi         # 唯一的 Web Service 接口
+│       │   └── CSM-RunScript.vi         # The single Web Service endpoint
 │       ├── CSM/
-│       │   └── CSM.vi                   # CSM 应用主模块
-│       └── Support/                     # 支持 VI
-└── G-Web Application/                   # G-Web 前端工程（NI LabVIEW NXG Web Module）
-    └── Web Application/                 # 可部署的 Web 应用（.gwebproject）
+│       │   └── CSM.vi                   # CSM application main module
+│       └── Support/                     # Support VIs
+└── G-Web Application/                   # G-Web front-end project (NI LabVIEW NXG Web Module)
+    └── Web Application/                 # Deployable web application (.gwebproject)
 ```
 
-## CSM-RunScript 接口
+## CSM-RunScript Endpoint
 
-| 项目 | 说明 |
+| Item | Description |
 | --- | --- |
-| 方法 | `POST` |
+| Method | `POST` |
 | URL | `http://<host>:<port>/CSMWebService/CSM-RunScript` |
-| 请求体 | CSM 脚本字符串（纯文本） |
-| 返回值 | 执行结果字符串（纯文本） |
+| Request body | CSM script string (plain text) |
+| Response | Execution result string (plain text) |
 
 ```
-# 同步调用，等待返回结果
+# Synchronous call — waits for the result
 API: Read >> channel0 -@ SomeModule
 
-# 异步调用，不等待返回值
+# Asynchronous call — does not wait for the result
 API: Start ->| SomeModule
 ```
 
-## 快速开始
+## Quick Start
 
-1. **构建 CSM 应用**：在 LabVIEW 中完成基于 CSM 框架的业务逻辑模块
-2. **打开后端工程**：用 LabVIEW 打开 `LabVIEW Project with Web Serivces/LabVIEW Project with Web Serivces.lvproj`，在 `WebService/CSM/CSM.vi` 中添加或修改业务模块
-3. **打开前端工程**：用 NI LabVIEW NXG Web Module 打开 `G-Web Application/Web Application/Web Application.gwebproject`，配置 HTTP 节点指向 `CSM-RunScript` 接口
-4. **部署与运行**：右键 Web Service → **Deploy**，或直接运行 `WebService/Startup Main.vi`；构建 G-Web 应用并发布到 NI Web Server
-5. **浏览器访问**：`http://<设备IP>:<端口>/CSMWebService/`
+1. **Build your CSM application**: Implement your business-logic modules in LabVIEW using the CSM framework.
+2. **Open the back-end project**: Open `LabVIEW Project with Web Serivces/LabVIEW Project with Web Serivces.lvproj` in LabVIEW and add or modify business modules inside `WebService/CSM/CSM.vi`.
+3. **Open the front-end project**: Open `G-Web Application/Web Application/Web Application.gwebproject` in NI LabVIEW NXG Web Module and configure the HTTP node to point to the `CSM-RunScript` endpoint.
+4. **Deploy and run**: Right-click the Web Service → **Deploy**, or run `WebService/Startup Main.vi` directly; build the G-Web application and publish it to the NI Web Server.
+5. **Access from browser**: `http://<device-IP>:<port>/CSMWebService/`
 
-## 依赖项
+## Dependencies
 
 - [Communicable State Machine (CSM)](https://github.com/NEVSTOP-LAB/Communicable-State-Machine)
-- [LabVIEW Application Web Server](https://www.ni.com/docs/zh-CN/bundle/labview/page/webservices.html)
-- [NI LabVIEW NXG Web Module](https://www.ni.com/zh-cn/support/downloads/software-products/download.labview-nxg-web-module.html)
+- [LabVIEW Application Web Server](https://www.ni.com/docs/en-US/bundle/labview/page/webservices.html)
+- [NI LabVIEW NXG Web Module](https://www.ni.com/en/support/downloads/software-products/download.labview-nxg-web-module.html)
 
-## 参考资料
+## References
 
-- [CSM-Wiki - 基于 G-Web 的应用开发](https://nevstop-lab.github.io/CSM-Wiki/docs/examples/csm-gweb-development.html)
-- [Communicable State Machine (CSM) 框架](https://github.com/NEVSTOP-LAB/Communicable-State-Machine)
-- [LabVIEW Web Services 官方文档](https://www.ni.com/docs/zh-CN/bundle/labview/page/webservices.html)
+- [CSM-Wiki - G-Web Application Development](https://nevstop-lab.github.io/CSM-Wiki/docs/examples/csm-gweb-development.html)
+- [Communicable State Machine (CSM) Framework](https://github.com/NEVSTOP-LAB/Communicable-State-Machine)
+- [LabVIEW Web Services Official Documentation](https://www.ni.com/docs/en-US/bundle/labview/page/webservices.html)
