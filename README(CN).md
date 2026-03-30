@@ -2,9 +2,9 @@
 
 [English](./README.md) | [中文](./README(CN).md)
 
-借助 CSM 框架，将 LabVIEW 应用发布为 Web 服务，通过 G-Web 前端在浏览器中进行远程监控与控制。只需暴露**一个** `CSM-RunScript` 接口，即可调用后端所有 CSM 模块的全部功能，无需为每个功能单独编写 Web Service VI。
+借助 CSM 框架，将 LabVIEW 应用发布为 Web 服务，通过 G-Web 前端在浏览器中实现远程监控与控制。只需开放**一个** `CSM-RunScript` 接口，即可调用后端所有 CSM 模块的全部功能，无需为每个功能单独编写 Web Service VI。
 
-适合部署在 NI cRIO/PXI 等 RT 目标上，用户无需安装客户端，直接通过浏览器访问局域网内设备。
+特别适合部署在 NI cRIO/PXI 等 RT 目标上 — 用户无需安装任何客户端软件，直接通过浏览器访问局域网内设备。
 
 > 详细文档：[CSM-Wiki - 基于 G-Web 的应用开发](https://nevstop-lab.github.io/CSM-Wiki/docs/examples/csm-gweb-development.html)
 
@@ -17,7 +17,7 @@ graph TB
     subgraph LabVIEW EXE/RT Target
         subgraph "NI Web Server（上位机或 RT）"
             GW["G-Web Application<br/>(HTML/CSS/JS 前端)"]
-            RS["CSM-RunScript API(POST)<br/>Web Service 后端接口"]
+            RS["CSM-RunScript API (POST)<br/>Web Service 后端接口"]
         end
 
         subgraph "LabVIEW 应用"
@@ -32,9 +32,9 @@ graph TB
     GW -.->|"HTML/CSS/JS"| Browser
     Browser -->|"② HTTP POST CSM Script"| RS
     RS -->|发送 CSM 脚本| Bus
-    Bus <-->|CSM消息| M1
-    Bus <-->|CSM消息| M2
-    Bus <-->|CSM消息| MN
+    Bus <-->|CSM 消息| M1
+    Bus <-->|CSM 消息| M2
+    Bus <-->|CSM 消息| MN
     RS -->|返回执行结果| Browser
 
     style RS fill:#e1f5ff
@@ -45,7 +45,7 @@ graph TB
 
 ## 核心优势
 
-- **单一接口，全面功能**：仅需暴露一个 `CSM-RunScript` 接口，即可调用后端所有 CSM 模块的全部功能
+- **单一接口，全面功能**：仅需开放一个 `CSM-RunScript` 接口，即可调用后端所有 CSM 模块的全部功能
 - **模块化开发**：基于 CSM 框架的消息驱动架构，模块间松耦合，易于扩展和维护
 - **无需客户端**：用户通过浏览器直接访问，无需安装任何客户端软件
 - **快速 Web 化**：将现有 LabVIEW 应用快速转换为 Web 应用，无需为每个功能编写独立的 Web Service
