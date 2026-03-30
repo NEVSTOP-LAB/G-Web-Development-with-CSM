@@ -2,9 +2,9 @@
 
 [English](./README.md) | [中文](./README(CN).md)
 
-Using the CSM framework to publish LabVIEW applications as Web Services and enable remote monitoring and control through a G-Web front-end in the browser. By exposing just **one** `CSM-RunScript` endpoint, all functionality of every CSM module in the back end becomes accessible — no need to write a separate Web Service VI for each feature.
+This project uses the CSM framework to publish LabVIEW applications as Web Services, enabling remote monitoring and control through a G-Web front-end in the browser. By exposing just **one** `CSM-RunScript` endpoint, all functionality of every CSM module in the back end becomes accessible — no need to write a separate Web Service VI for each feature.
 
-Ideal for deployment on NI cRIO/PXI and other RT targets. Users can access the device over the local network directly from a browser without installing any client software.
+Ideal for NI cRIO/PXI and other RT targets — users access the device over the local network directly from a browser with no client software required.
 
 > Full documentation: [CSM-Wiki - G-Web Application Development](https://nevstop-lab.github.io/CSM-Wiki/docs/examples/csm-gweb-development.html)
 
